@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Profesjonalna Liga Piłkarska 💙",
+        name: "Made with ❤️",
         // Activity type number (0 = Playing).
         type: 0,
       },
@@ -292,10 +292,10 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Kliknij poniższy przycisk, aby się zweryfikować i uzyskać dostęp do serwera!",
+    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
 
     // Text on the verification button.
-    defaultButtonText: "Weryfikacja",
+    defaultButtonText: "Verify",
 
     // Automatic verification behavior.
     autoVerify: {
@@ -322,7 +322,7 @@ export const botConfig = {
 
       // Human-readable descriptions for each criteria mode.
       criteria: {
-        account_age: "Konto musi być starsze niż określona liczba dni.",
+        account_age: "Account must be older than specified days",
         server_size: "All users if server has less than 1000 members",
         none: "All users immediately"
       }
@@ -362,11 +362,11 @@ export const botConfig = {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
     defaultWelcomeMessage:
-      "Witaj, {user}, na {server}! Mamy już {memberCount} członków!",
+      "Welcome {user} to {server}! We now have {memberCount} members!",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
     defaultGoodbyeMessage:
-      "Użytkownik {user} opuścił serwer. Mamy teraz {memberCount} członków.",
+      "{user} has left the server. We now have {memberCount} members.",
     // Channel ID for welcome messages.
     defaultWelcomeChannel: null,
     // Channel ID for goodbye messages.
@@ -402,7 +402,7 @@ export const botConfig = {
       // Built-in counter types and how each count is calculated.
       members: {
         name: "👥 Members",
-        description: "Łączna liczba członków na serwerze",
+        description: "Total members in the server",
         getCount: (guild) => guild.memberCount.toString(),
       },
       bots: {
@@ -424,13 +424,13 @@ export const botConfig = {
   // GENERIC BOT MESSAGES
   // =========================
   messages: {
-    noPermission: "Nie masz uprawnień do użycia tego polecenia.",
-    cooldownActive: "Proszę odczekać {time} przed ponownym użyciem tego polecenia.",
-    errorOccurred: "Podczas wykonywania tego polecenia wystąpił błąd.",
+    noPermission: "You do not have permission to use this command.",
+    cooldownActive: "Please wait {time} before using this command again.",
+    errorOccurred: "An error occurred while executing this command.",
     missingPermissions:
-      "Brakuje mi uprawnień wymaganych do wykonania tej czynności.",
-    commandDisabled: "To polecenie zostało wyłączone.",
-    maintenanceMode: "Bot znajduje się obecnie w trybie konserwacji.",
+      "I am missing required permissions to perform this action.",
+    commandDisabled: "This command has been disabled.",
+    maintenanceMode: "The bot is currently in maintenance mode.",
   },
 
   // =========================
