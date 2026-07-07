@@ -83,7 +83,7 @@ async function persistPanelMessageId(client, guildId, guildConfig, messageId) {
 function buildPanelEmbed(config) {
     return new EmbedBuilder()
         .setTitle('Support Tickets')
-        .setDescription(config.ticketPanelMessage || 'Click the button below to create a support ticket.')
+        .setDescription(config.ticketPanelMessage || 'Kliknij poniższy przycisk, aby utworzyć ticketa.')
         .setColor(getColor('info'));
 }
 
@@ -91,7 +91,7 @@ function buildPanelButtonRow(config) {
     return new ActionRowBuilder().addComponents(
         new ButtonBuilder()
             .setCustomId('create_ticket')
-            .setLabel(config.ticketButtonLabel || 'Create Ticket')
+            .setLabel(config.ticketButtonLabel || 'Stwórz ticketa')
             .setStyle(ButtonStyle.Primary)
             .setEmoji('📩'),
     );
