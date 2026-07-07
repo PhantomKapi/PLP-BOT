@@ -14,7 +14,7 @@ const PREMIUM_BONUS_PERCENTAGE = 0.1;
 export default {
     data: new SlashCommandBuilder()
         .setName('daily')
-        .setDescription('Claim your daily cash reward'),
+        .setDescription('Odbierz swoją codzienną nagrodę pieniężną'),
 
     execute: withErrorHandling(async (interaction, config, client) => {
         const deferred = await InteractionHelper.safeDefer(interaction);
@@ -32,7 +32,7 @@ export default {
                 throw createError(
                     "Failed to load economy data for daily",
                     ErrorTypes.DATABASE,
-                    "Failed to load your economy data. Please try again later.",
+                    "Nie udało się wczytać danych dotyczących Twojej ekonomii. Spróbuj ponownie później.",
                     { userId, guildId }
                 );
             }
@@ -84,11 +84,11 @@ export default {
             });
 
             const embed = successEmbed(
-                "✅ Daily Claimed!",
+                "✅ Codzienna nagroda odebrana!",
                 `You have claimed your daily **$${earned.toLocaleString()}**!${bonusMessage}`
             )
                 .addFields({
-                    name: "New Cash Balance",
+                    name: "Nowe saldo gotówkowe",
                     value: `$${userData.wallet.toLocaleString()}`,
                     inline: true,
                 })
