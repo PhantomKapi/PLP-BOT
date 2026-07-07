@@ -44,7 +44,7 @@ export default {
                 throw createError(
                     "Daily cooldown active",
                     ErrorTypes.RATE_LIMIT,
-                    `You need to wait before claiming daily again. Try again in **${formatDuration(timeRemaining)}**.`,
+                    `Musisz poczekać, zanim ponownie złożysz wniosek o dzienne wynagrodzenie. Spróbuj ponownie za **${formatDuration(timeRemaining)}**.`,
                     { timeRemaining, cooldownType: 'daily' }
                 );
             }
@@ -85,7 +85,7 @@ export default {
 
             const embed = successEmbed(
                 "✅ Codzienna nagroda odebrana!",
-                `You have claimed your daily **$${earned.toLocaleString()}**!${bonusMessage}`
+                `Odebrałeś **$${earned.toLocaleString()}**!${bonusMessage}`
             )
                 .addFields({
                     name: "Nowe saldo gotówkowe",
