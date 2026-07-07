@@ -7,8 +7,8 @@ import { InteractionHelper } from '../../utils/interactionHelper.js';
 
 export default {
     data: new SlashCommandBuilder()
-        .setName('balance')
-        .setDescription("Check your or someone else's balance")
+        .setName('Saldo')
+        .setDescription("Sprawdź swoje saldo lub saldo innej osoby")
         .addUserOption(option =>
             option
                 .setName('user')
@@ -32,7 +32,7 @@ export default {
             throw createError(
                 "Bot user queried for balance",
                 ErrorTypes.VALIDATION,
-                "Bots don't have an economy balance."
+                "Boty nie posiadają salda ekonomicznego."
             );
         }
 
@@ -42,9 +42,9 @@ export default {
 
         if (!userData) {
             throw createError(
-                "Failed to load economy data",
+                "Nie udało się wczytać danych ekonomicznych",
                 ErrorTypes.DATABASE,
-                "Failed to load economy data. Please try again later.",
+                "Nie udało się wczytać danych ekonomicznych. Spróbuj ponownie później.",
                 { userId: targetUser.id, guildId }
             );
         }
@@ -60,7 +60,7 @@ export default {
             })
                 .addFields(
                     {
-                        name: "💵 Cash",
+                        name: "💵 Waluta",
                         value: `$${wallet.toLocaleString()}`,
                         inline: true,
                     },
@@ -70,7 +70,7 @@ export default {
                         inline: true,
                     },
                     {
-                        name: "💰 Total",
+                        name: "💰 Łącznie",
                         value: `$${(wallet + bank).toLocaleString()}`,
                         inline: true,
                     }
