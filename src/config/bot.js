@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Made with ❤️",
+        name: "https://www.roblox.com/games/118737272994178/PLP-Hub",
         // Activity type number (0 = Playing).
         type: 0,
       },
