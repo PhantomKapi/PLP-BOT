@@ -292,10 +292,10 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
+    defaultMessage: "Kliknij poniższy przycisk, aby się zweryfikować i uzyskać dostęp do serwera!",
 
     // Text on the verification button.
-    defaultButtonText: "Verify",
+    defaultButtonText: "Weryfikacja",
 
     // Automatic verification behavior.
     autoVerify: {
@@ -322,7 +322,7 @@ export const botConfig = {
 
       // Human-readable descriptions for each criteria mode.
       criteria: {
-        account_age: "Account must be older than specified days",
+        account_age: "Konto musi być starsze niż określona liczba dni.",
         server_size: "All users if server has less than 1000 members",
         none: "All users immediately"
       }
@@ -362,11 +362,11 @@ export const botConfig = {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
     defaultWelcomeMessage:
-      "Welcome {user} to {server}! We now have {memberCount} members!",
+      "Witaj, {user}, na {server}! Mamy już {memberCount} członków!",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
     defaultGoodbyeMessage:
-      "{user} has left the server. We now have {memberCount} members.",
+      "Użytkownik {user} opuścił serwer. Mamy teraz {memberCount} członków.",
     // Channel ID for welcome messages.
     defaultWelcomeChannel: null,
     // Channel ID for goodbye messages.
@@ -402,7 +402,7 @@ export const botConfig = {
       // Built-in counter types and how each count is calculated.
       members: {
         name: "👥 Members",
-        description: "Total members in the server",
+        description: "Łączna liczba członków na serwerze",
         getCount: (guild) => guild.memberCount.toString(),
       },
       bots: {
@@ -424,13 +424,13 @@ export const botConfig = {
   // GENERIC BOT MESSAGES
   // =========================
   messages: {
-    noPermission: "You do not have permission to use this command.",
-    cooldownActive: "Please wait {time} before using this command again.",
-    errorOccurred: "An error occurred while executing this command.",
+    noPermission: "Nie masz uprawnień do użycia tego polecenia.",
+    cooldownActive: "Proszę odczekać {time} przed ponownym użyciem tego polecenia.",
+    errorOccurred: "Podczas wykonywania tego polecenia wystąpił błąd.",
     missingPermissions:
-      "I am missing required permissions to perform this action.",
-    commandDisabled: "This command has been disabled.",
-    maintenanceMode: "The bot is currently in maintenance mode.",
+      "Brakuje mi uprawnień wymaganych do wykonania tej czynności.",
+    commandDisabled: "To polecenie zostało wyłączone.",
+    maintenanceMode: "Bot znajduje się obecnie w trybie konserwacji.",
   },
 
   // =========================
