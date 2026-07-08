@@ -11,28 +11,28 @@ import verificationDashboard from './modules/verification_dashboard.js';
 
 export default {
     data: new SlashCommandBuilder()
-        .setName("verification")
-        .setDescription("Manage the server verification system")
+        .setName("weryfikacja")
+        .setDescription("Zarządzaj systemem weryfikacji na serwerze")
         .addSubcommand(subcommand =>
             subcommand
-                .setName("setup")
-                .setDescription("Set up the verification system")
+                .setName("ustaw")
+                .setDescription("Ustaw system weryfikacji")
                 .addChannelOption(option =>
                     option
-                        .setName("verification_channel")
-                        .setDescription("Channel where verification messages will be sent")
+                        .setName("kanał_weryfikacji")
+                        .setDescription("Kanał, na który będą wysyłane wiadomości weryfikacyjne")
                         .addChannelTypes(ChannelType.GuildText)
                         .setRequired(true)
                 )
                 .addRoleOption(option =>
                     option
-                        .setName("verified_role")
-                        .setDescription("Role to give to verified users")
+                        .setName("zweryfikowana_rola")
+                        .setDescription("Rola do nadania zweryfikowanym użytkownikom")
                         .setRequired(true)
                 )
                 .addStringOption(option =>
                     option
-                        .setName("message")
+                        .setName("Wiadomość")
                         .setDescription("Custom verification message")
                         .setMaxLength(2000)
                         .setRequired(false)
@@ -47,7 +47,7 @@ export default {
         )
         .addSubcommand(subcommand =>
             subcommand
-                .setName("remove")
+                .setName("usuń")
                 .setDescription("Remove verification from a user")
                 .addUserOption(option =>
                     option
